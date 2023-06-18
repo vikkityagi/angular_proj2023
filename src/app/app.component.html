@@ -1,0 +1,38 @@
+<!-- <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+  <div class="row">
+    <label>Name</label>
+    <input type="text" class="form-control" name="userName" ngModel />
+  </div>
+  <div class="row">
+    <label>Email</label>
+    <input type="email" class="form-control" name="email" ngModel />
+  </div>
+  <div class="row">
+    <fieldset ngModelGroup="address">
+      <legend>Address</legend>
+
+      <label>Street:</label>
+      <input type="text" class="form-control" name="street" ngModel required />
+
+      <label>City:</label>
+      <input type="text" class="form-control" name="city" ngModel required />
+
+      <label>State:</label>
+      <input type="text" class="form-control" name="state" ngModel required />
+    </fieldset>
+  </div>
+  <div class="row mt-2">
+    <button type="submit" class="btn btn-danger">Submit</button>
+  </div>
+</form> -->
+
+
+<p><a href="/form">Open</a></p>
+<p><a href="/upload">Upload</a></p>
+<div class="container mt-3 bg-primary" [ngStyle]="{'text-align': 'center','color': 'white'}" >
+  <!-- <app-child-component [parentData]="user" (childData)="onNavigation($event)"></app-child-component>
+  <p>Parent Component Start here</p>
+  <button class="btn btn-danger" (click)="changeFromParentComponent()" [ngStyle]="{'cursor':'pointer'}">Change From Parent Component</button> -->
+  <router-outlet></router-outlet>
+</div>
+

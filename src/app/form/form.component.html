@@ -1,0 +1,67 @@
+<div class="card">
+  <div class="form-group">
+    <form [formGroup]="myform" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="mt-2">
+          <mat-form-field appearance="outline">
+            <mat-label>User Name:</mat-label>
+            <input
+              type="text"
+              matInput
+              placeholder="Name"
+              formControlName="userName"
+            />
+          </mat-form-field>
+        </div>
+        <div class="mt-1">
+          <mat-form-field appearance="outline">
+            <mat-label>Email:</mat-label>
+            <input
+              type="email"
+              matInput
+              placeholder="password"
+              formControlName="email"
+            />
+          </mat-form-field>
+        </div>
+        <div class="mt-1">
+          <mat-form-field appearance="outline">
+            <mat-label>Password:</mat-label>
+            <input
+              type="password"
+              matInput
+              placeholder="password"
+              formControlName="password"
+            />
+          </mat-form-field>
+        </div>
+        <div class="mt-1">
+          <mat-form-field appearance="outline">
+            <mat-label>Confirm Password:</mat-label>
+            <input
+              type="password"
+              matInput
+              placeholder="password"
+              formControlName="cPassword"
+            />
+          </mat-form-field>
+        </div>
+          <div class="row" style="justify-content: center">
+              <div class="form-group" style="width:235px">
+                <input type="file" class="form-control" accept=".jpg, .png, .jpeg, .gif, .pdf"
+                  (change)="onFileChange($event)">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAeCAIAAADhM9qrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADwSURBVFhH7ZLRFYMgDEWZy4GYh2lYxmFUiAoP82ixH209uR9KiLzco7rlJzGtEUxrBNMa4Tlac5icm8JcCh/zuoG3IEHlOVrALa3X/JVW9K5NLFvwCXB2ro6StyBBhbyti1e1AaHV7HpwgrcgQYV9xCozkazA5KJ1fcG8dV8LvVJxxkBoLgRw2uAtSFDhv3w+K3lpWVIgVJ4K6aoOV1uQoMK1isy5ECBUZke543TeggSVjlY+vR3eb/sm0drIv1D1IG9BgkpPS7y8Ryuq1U7nrQ+15HybwLWOA1LzFiSo9LW+hmmNYFojmNYIpvU+y7ICFDAIKcsNtnIAAAAASUVORK5CYII=">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAeCAIAAADhM9qrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADwSURBVFhH7ZLRFYMgDEWZy4GYh2lYxmFUiAoP82ixH209uR9KiLzco7rlJzGtEUxrBNMa4Tlac5icm8JcCh/zuoG3IEHlOVrALa3X/JVW9K5NLFvwCXB2ro6StyBBhbyti1e1AaHV7HpwgrcgQYV9xCozkazA5KJ1fcG8dV8LvVJxxkBoLgRw2uAtSFDhv3w+K3lpWVIgVJ4K6aoOV1uQoMK1isy5ECBUZke543TeggSVjlY+vR3eb/sm0drIv1D1IG9BgkpPS7y8Ryuq1U7nrQ+15HybwLWOA1LzFiSo9LW+hmmNYFojmNYIpvU+y7ICFDAIKcsNtnIAAAAASUVORK5CYII=">
+              </div>
+            </div>
+            <div class="mt-3">
+              {{jsonFile}}
+            </div>
+          </div>
+      <div class="mt-3">
+        <button type="submit" class="btn btn-danger">Submit</button>
+      </div>
+    </form>
+
+  </div>
+</div>
