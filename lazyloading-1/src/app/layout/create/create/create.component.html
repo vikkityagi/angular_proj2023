@@ -1,0 +1,41 @@
+<mat-card class="mat-card">
+  <mat-card-header class="mat-header">Add Form</mat-card-header>
+  <mat-card-content class="mat-content">
+    <form [formGroup]="myform1" (ngSubmit)="onSubmit()">
+      <div>
+      <mat-form-field>
+        <mat-label>User Name:</mat-label>
+        <mat-icon matPrefix>supervised_user_circle</mat-icon>
+        <input type="text" matInput formControlName="name">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <mat-icon matPrefix>lock</mat-icon>
+        <input type="password" matInput formControlName="password">
+      </mat-form-field>
+    </div>
+    <div>
+      <button type="submit" class="btn">Submit</button>
+    </div>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Uesr Name</th>
+          <th>Password</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let user of userList">
+        <tr>
+          <td>{{user.name}}</td>
+          <td>{{user.password}}</td>
+          <td (click)="edit(user.id)">Edit</td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-card-actions>
+</mat-card>
